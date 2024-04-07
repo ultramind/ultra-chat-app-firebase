@@ -4,7 +4,7 @@ import SendIcon from "./icons/SendIcon";
 
 const ChatInput = () => {
   return (
-    <div className="bg-primary text-white font-bold h-[9.5%] flex gap-3 p-2 pr-4">
+    <div className="bg-primary absolute bottom-0 w-[100%] text-white font-bold h-[9.5%] flex gap-3 p-2 pr-4">
       <input
         type="text"
         placeholder="Type Something..."

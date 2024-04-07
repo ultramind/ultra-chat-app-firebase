@@ -5,7 +5,7 @@ import ChatInput from "./ChatInput";
 
 function MessageContainer() {
   return (
-    <div className="w-[70%] h-full">
+    <div className="w-[70%] relative h-full">
       {/* // Title */}
       <div className="w-full bg-gray-800 p-4 flex items-center justify-between rounded-tr-lg">
         <span>Akachukwu</span>
