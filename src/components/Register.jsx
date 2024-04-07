@@ -4,6 +4,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Register() {
   const navigate = useNavigate();
@@ -53,6 +54,7 @@ function Register() {
         }
       );
       navigate("/");
+      toast.success("Registration Successfull", { theme: "dark" });
     } catch (error) {
       setError(true);
       console.log(error);

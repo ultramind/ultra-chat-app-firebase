@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -15,6 +18,7 @@ const Login = () => {
     try {
       const res = await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
+      toast.success("welcome back", { theme: "dark" });
     } catch (error) {
       console.log(error);
       setError(true);
@@ -40,7 +44,7 @@ const Login = () => {
           className="p-2 border-b-2 border-gray-600 bg-gray-800 focus:outline-none focus:outline-rose-500 focus:rounded-lg"
         />
         <button className="bg-rose-500 p-2 rounded-lg font-bold cursor-pointer text-white">
-          Sign In
+          {isLoading ? "Signing..." : "Sign In"}
         </button>
         {error && <span className="text-red-500">Something went wrong...</span>}
         <span>
