@@ -1,5 +1,6 @@
 import data from "../constant/data";
 import NavBar from "./NavBar";
+import SearchBox from "./SearchBox";
 import User from "./User";
 import PowerIcon from "./icons/PowerIcon";
 function Users() {
@@ -9,13 +10,7 @@ function Users() {
       {/* header */}
       <NavBar />
       {/* search */}
-      <div className=" w-full border-b-2 border-b-forground">
-        <input
-          type="text"
-          placeholder="Find users"
-          className="w-full bg-transparent py-2 px-4 focus:outline-none"
-        />
-      </div>
+      <SearchBox />
       <div className="overflow-y-scroll">
         <User />
         <User />
