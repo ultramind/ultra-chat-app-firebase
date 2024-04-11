@@ -1,9 +1,9 @@
 import VideoIcon from "./icons/VideoIcon";
 import UserPlusIcon from "./icons/UserPlusIcon";
-import Messages from "./Messages";
 import ChatInput from "./ChatInput";
+import Chats from "./Chats";
 
-function MessageContainer() {
+function ChatContainer() {
   return (
     <div className="w-[70%] relative h-full">
       {/* // Title */}
@@ -19,10 +19,10 @@ function MessageContainer() {
         </div>
       </div>
       {/* Messages */}
-      <Messages />
+      <Chats />
       <ChatInput />
     </div>
   );
 }
 
-export default MessageContainer;
+export default ChatContainer;
