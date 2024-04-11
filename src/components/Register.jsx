@@ -45,7 +45,7 @@ function Register() {
               uid: res.user.uid,
               fullname,
               email,
-              photoUrl: downloadURL,
+              photoURL: downloadURL,
             });
 
             // creat the user chat collection
@@ -53,7 +53,7 @@ function Register() {
           });
         }
       );
-      navigate("/");
+      navigate("/login");
       toast.success("Registration Successfull", { theme: "dark" });
     } catch (error) {
       setError(true);
