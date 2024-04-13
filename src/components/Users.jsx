@@ -25,7 +25,6 @@ function Users() {
     }
 
     currentUser?.uid && getChatUsers();
-    console.log(chatUsers)
   }, [currentUser.uid])
 
   
@@ -36,7 +35,7 @@ function Users() {
       {/* search */}
       <SearchBox />
       <div className="overflow-y-scroll">
-        {chatUsers.map(user=>(
+        {chatUsers?.sort((a,b)=>b[1].date-a[1].date).map(user=>(
           <User key={user[0]} userData={user[1]} />
         ))}
         {/* <User /> */}
