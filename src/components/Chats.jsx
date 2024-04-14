@@ -20,7 +20,7 @@ function Chats() {
 
 
   return (
-    <div className="w-full p-4 bg-gray-600 h-[85%] border-t-2 border-forground overy">
+    <div className="w-full p-4 bg-gray-600 h-[85%] overflow-y-scroll border-t-2 border-forground overy">
       {messages.map((msg,i)=>(
         <Chat key={i} message={msg}/>
       ))}
